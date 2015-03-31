@@ -17,8 +17,8 @@ With the following query, we can create the graph:
 ----
 // creating the based nodes and relationships
 
-CREATE (ella:person{name:’Ella}), (barcelona:city{name:’Barcelona’}), (age:age{name:’25’}, (hauttyp:hauttyp{name:’trocken’}, (haarfarbe:haarfarbe{name:’braun’})
-CREATE (pricilla:person{name:’Pricilla}), (stuttgart:city{name:’Stuttgart}), (age:age{name:’35’}), (kid:child{name:’Hanna’}, (hauttyp:hauttyp{name:’mischhaut’}, haarfarbe:haarfarbe{name:’blond’})
+CREATE (ella:person{name:'Ella'}), (barcelona:city{name:'Barcelona'}), (age:age{name:'25'}, (hauttyp:hauttyp{name:'trocken'}, (haarfarbe:haarfarbe{name:'braun'})
+CREATE (pricilla:person{name:'Pricilla}), (stuttgart:city{name:'Stuttgart'}), (age:age{name:'35'}), (kid:child{name:'Hanna'}, (hauttyp:hauttyp{name:'mischhaut'}, haarfarbe:haarfarbe{name:'blond'})
 CREATE (barcelona)<-[:LIVES_IN]-(ella)-[:HAS_AGE]->(age)
 CREATE (stuttgart)<-[:LIVES_IN]-(pricilla)-[:HAS_AGE]->(age)
 CREATE (ella)-[:HAS_HAUTTYP]->(trocken)
@@ -29,9 +29,9 @@ CREATE (pricilla)-[:HAS_HAIRCOLOR]->(blond)
 
 // create the "inferred" node and relationship
 
-CREATE (Sample:Shampoo{name:’Shampoo})
+CREATE (Sample:Shampoo{name:'Shampoo'})
 CREATE (pricilla)-[:SHOULD_RECEIVE_SAMPLE]->(Shampoo)
-CREATE (Sample:Creme{name:’Creme})
+CREATE (Sample:Creme{name:'Creme'})
 CREATE (ella)-[:SHOULD_RECEIVE_SAMPLE]->(Creme)
 ----
 
@@ -86,3 +86,4 @@ CREATE (rik)-[:SHOULD_RECEIVE_PROMO_FOR]->(xbox)
 //console
 
 Hope this example is useful. Enjoy!
+/
