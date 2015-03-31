@@ -18,7 +18,7 @@ With the following query, we can create the graph:
 // creating the based nodes and relationships
 
 CREATE (ella:person{name:'Ella'}), (barcelona:city{name:'Barcelona'}), (age:age{name:'25'}), (hauttyp:hauttyp{name:'trocken'}), (haarfarbe:haarfarbe{name:'braun'})
-CREATE (pricilla:person{name:'Pricilla}), (stuttgart:city{name:'Stuttgart'}), (age:age{name:'35'}), (kid:child{name:'Hanna'}), (hauttyp:hauttyp{name:'mischhaut'}), haarfarbe:haarfarbe{name:'blond'})
+CREATE (pricilla:person{name:'Pricilla'}), (stuttgart:city{name:'Stuttgart'}), (age:age{name:'35'}), (kid:child{name:'Hanna'}), (hauttyp:hauttyp{name:'mischhaut'}), haarfarbe:haarfarbe{name:'blond'})
 CREATE (barcelona)<-[:LIVES_IN]-(ella)-[:HAS_AGE]->(age)
 CREATE (stuttgart)<-[:LIVES_IN]-(pricilla)-[:HAS_AGE]->(age)
 CREATE (ella)-[:HAS_HAUTTYP]->(trocken)
